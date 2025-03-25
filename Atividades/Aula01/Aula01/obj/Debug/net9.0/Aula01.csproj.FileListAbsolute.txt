@@ -96,3 +96,4 @@ D:\Unoesc\Programacao I\2025\Atividades\Aula01\Aula01\obj\Debug\net9.0\refint\Au
 D:\Unoesc\Programacao I\2025\Atividades\Aula01\Aula01\obj\Debug\net9.0\Aula01.pdb
 D:\Unoesc\Programacao I\2025\Atividades\Aula01\Aula01\obj\Debug\net9.0\Aula01.genruntimeconfig.cache
 D:\Unoesc\Programacao I\2025\Atividades\Aula01\Aula01\obj\Debug\net9.0\ref\Aula01.dll
+D:\Unoesc\Programacao I\2025\Atividades\Aula01\Aula01\obj\Debug\net9.0\Aula01.sourcelink.json
