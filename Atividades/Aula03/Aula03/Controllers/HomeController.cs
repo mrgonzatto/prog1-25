@@ -123,9 +123,50 @@ public class HomeController : Controller
 
         string retorno = string.Empty;
 
-        for (int i = 0; i < x; i++)
+        for (int i = 1; i <= x; i++)
         {
+            // E se eu quisesse interromper o laço
+            // caso ele fosse maior que 50
+            if (i > 50)
+                break; //O comando break interrompe o laço
+
+            // Caso eu deseje que o laço siga em frente
+            // forçando-o a continuar a execução
+            if ((i % 2) != 0)
+                continue;
+
             retorno += $"{i}; ";
+        }
+
+        return retorno;
+    }
+
+    [HttpGet]
+    public string GetForeach(string color)
+    {
+        /*
+            O comando foreach (para cada) é utilizado para 
+            iterar por uma sequência de itens em uma coleção
+            e servir como uma opção simples de repetição.
+         */
+        string[] colors = { "Vermelho", 
+            "Preto", "Azul", "Amarelo", "Verde", "Branco", 
+            "Azul-Marinho", "Rosa", "Roxo", "Cinza"};
+
+        string retorno = string.Empty;
+
+        if (
+            colors.Contains(
+                char.ToUpper(color[0]) + color.Substring(1) 
+            )
+        )
+            retorno = "A cor escolhida é válida.";
+        else
+            retorno = "Cor escolhida inválida.";
+
+        foreach (string s in colors) 
+        {
+            retorno += $" [{s}] ";
         }
 
         return retorno;
