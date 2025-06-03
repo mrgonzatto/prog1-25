@@ -1,3 +1,6 @@
+using Modelo;
+using Repository;
+
 var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
@@ -25,5 +28,32 @@ app.MapControllerRoute(
     pattern: "{controller=Home}/{action=Index}/{id?}")
     .WithStaticAssets();
 
+FillCustomerData();
 
 app.Run();
+
+
+static void FillCustomerData()
+{
+    for (int i = 1; i <= 10; i++)
+    {
+        Customer customer = new()
+        {
+            Id = i,
+            Name = $"Customer {i}",
+            HomeAddress = new Address() 
+            {
+                Id = i,
+                AddressType = "Casa",
+                City = "Videira",
+                Country = "HU3HU3BR",
+                State = "SC",
+                PostalCode = "89560-000",
+                Street1 = "Rua da minha casa",
+                Street2 = "Sua casa"
+            }
+        };
+
+        CustomerData.Customers.Add(customer);
+    }
+}
